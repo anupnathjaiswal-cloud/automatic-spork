@@ -1,6 +1,14 @@
+// "use client";
 import { ThemeSwitch } from "@/components/ui/ThemeSwitch";
+import { UserMenuWithSession } from "@/features/auth/components/user-menu";
+// import { authClient } from "@/lib/auth-client";
 
 export default function Home() {
+    // const { data } = authClient.useSession();
+    // console.log("Data\n", data?.user);
+    // console.log("+".repeat(50));
+    // console.log("Session\n", data?.session);
+
     return (
         <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(168,85,247,0.18),_transparent_35%),linear-gradient(to_bottom,_rgba(255,255,255,0.04),_transparent)] px-6 py-10 text-foreground">
             <div className="mx-auto max-w-5xl">
@@ -93,6 +101,8 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+
+                <UserMenuWithSession variant="profile" />
             </div>
         </main>
     );
